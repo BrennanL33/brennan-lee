@@ -1,199 +1,1135 @@
-Brennan Lee
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brennan Lee — Chemical Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --navy:         #1C2B4A;
+      --navy-dark:    #111827;
+      --accent:       #2B6CB0;
+      --accent-hover: #1E4F8C;
+      --accent-light: #EBF4FF;
+      --bg:           #F9F8F6;
+      --bg-alt:       #FFFFFF;
+      --muted:        #64748B;
+      --muted-light:  #94A3B8;
+      --border:       #E2E8F0;
+      --text:         #1E293B;
+      --white:        #FFFFFF;
+      --tag-bg:       #EBF4FF;
+      --tag-text:     #1E4F8C;
+      --radius:       8px;
+      --radius-lg:    16px;
+      --shadow:       0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.05);
+      --shadow-md:    0 4px 24px rgba(0,0,0,0.10);
+    }
 
+    html { scroll-behavior: smooth; }
 
-BENG CHEMICAL ENGINEERING · BATH  ·  MSC ENERGY SYSTEMS & DATA ANALYTICS · UCL
-Brennan Lee
-Renewable Energy   |   Capital Projects
-Passionate Chemical Engineer with commercial insight in the Renewables industry.
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+    }
 
-Download CV View Projects
-77.5%
-1ST CLASS AVERAGE
-£500M+
-PORTFOLIO VALUE COVERED
-15+
-TECHNICAL DUE DILIGENCE REPORTS
-3
-INDUSTRIES EXPERIENCED
-￼
-ABOUT ME
-Chemical Engineer. Problem Solver.
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: var(--shadow); }
 
-I am a BEng Chemical Engineering graduate from the University of Bath (1st Class Honours, 77.5%), progressing to an MSc in Energy Systems and Data Analytics at University College London in September 2026. My experience spans renewable energy and battery storage engineering at Everoze, financial advisory at PricewaterhouseCoopers in Kuala Lumpur, and process engineering at IOI Oleochemical in Penang.
-I combine strong technical skills in process simulation, reaction modelling, and equipment design with the commercial acumen to translate engineering findings into client-ready recommendations. I am an IChemE student member working towards full chartership.
-MSC
-Energy Systems & Data Analytics — UCL
-BENG
-Chemical Engineering — University of Bath
-BENG CLASSIFICATION
-1st Class Honours (77.5%)
-MSC START
-September 2026
-EDUCATION
-Academic Background
+    .nav-inner {
+      max-width: 1140px; margin: 0 auto; padding: 0 2rem;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
 
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--navy); text-decoration: none; letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
 
-University College London (UCL)
-Sep 2026 – Sep 2027
-MSc Energy Systems and Data Analytics
-London, UK
-		Will explore data analytics and modelling across energy systems, transport, and the built environment.
+    .nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; }
 
-University of Bath
-Oct 2022 – Jul 2026
-BEng Chemical Engineering (with placement)
-Bath, UK
-		Achieved 77.5% (1st Class Honours) in Years 1 and 2, covering key principles including Fluid Mechanics, Reaction Engineering, and Process Safety.
-		Working towards IChemE chartership.
-WORK EXPERIENCE
-Professional Background
+    .nav-links a {
+      font-size: 0.85rem; font-weight: 500; color: var(--muted);
+      text-decoration: none; padding: 0.35rem 0.7rem;
+      border-radius: var(--radius); transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); background: var(--accent-light); }
 
+    .nav-cta {
+      background: var(--accent) !important; color: var(--white) !important;
+      padding: 0.375rem 1.1rem !important; margin-left: 0.5rem;
+    }
+    .nav-cta:hover { background: var(--accent-hover) !important; color: var(--white) !important; }
 
-Everoze
-Sep 2024 – Jul 2025
-Process & Systems Engineering Intern — Solar & Storage
-Bristol, UK
-		Reduced lender risk exposure across £500M+ in BESS and solar portfolios (650 kWp to 360 MWp) by producing 15+ technical due diligence reports covering site feasibility assessments, grid integration reviews, and actionable risk mitigation recommendations.
-		Enabled solar site selection for two distilleries by performing RAG land assessments across 20+ land parcels, applying site feasibility criteria including grid proximity, environmental considerations, and shading analysis.
-		Improved CAPEX and OPEX forecasting for BESS projects by building a dynamic cost benchmarking model in Excel using Solver-based optimisation, providing scalable process economics across varying project sizes to support data-driven client recommendations.
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--navy); border-radius: 2px; transition: all 0.3s;
+    }
 
-PricewaterhouseCoopers (PwC)
-Aug – Sep 2023
-Advisory Intern — Capital Projects & Infrastructure
-Kuala Lumpur, Malaysia
-		Strengthened a client's negotiation position on a £30M airline merger deal by conducting technical and financial benchmarking across 4 case studies, evaluating reorganisation decisions and asset utilisation.
-		Collated and normalised financial and operational metrics (asset turnover, profit per available seat kilometres, aircraft utilisation), demonstrating analytical and multi-disciplinary skills applicable to engineering modelling.
+    .mobile-menu {
+      display: none; position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem; flex-direction: column; gap: 0;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 0.9rem; font-weight: 500; color: var(--navy);
+      text-decoration: none; padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a:last-child { border-bottom: none; color: var(--accent); }
 
-IOI Oleochemical
-Jan – Mar 2021
-Process Engineering Trainee
-Penang, Malaysia
-		Applied process safety and quality assurance principles in a manufacturing plant by observing and documenting HACCP monitoring across production lines, gaining exposure to HSE compliance, utility optimisation strategies, and inter-department collaboration between quality control, assurance, and procurement.
-ENGINEERING PROJECTS
-Academic & Technical Work
+    /* ── HERO ── */
+    #hero {
+      background: var(--navy);
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 7rem 2rem 5rem; position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 72% 48%, rgba(43,108,176,0.18) 0%, transparent 58%);
+    }
+    #hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+    }
 
-⚗️
-FINAL YEAR INDIVIDUAL PROJECT
-Sour Water Gas Shift Reactor
-Apr – May 2026
-Delivered a fully specified plug flow reactor design for the Fischer-Tropsch process in a 70-page report. Modelled reaction kinetics, temperature dependence, and pressure drop in MATLAB (1,000+ lines). Full process safety demonstration via HAZID, P&ID with control loops, LOPA, and 3D AutoCAD mechanical design to ASME and NACE-compliance standards.
-MATLAB
-AutoCAD
-HAZID
-P&ID
-LOPA
-ASME
-Fischer-Tropsch
-✈️
-FINAL YEAR DESIGN PROJECT
-Sustainable Aviation Fuel Production
-Feb – Apr 2026
-Led a team of 8 to advance a concept-to-design SAF production route in 7 weeks, producing a 135-page pre-FEED report covering mass & energy balances, equipment sizing, plant economics, pinch analysis, and lifecycle emissions against CORSIA compliance. Introduced structured weekly planning with defined milestones.
-Pre-FEED
-Pinch Analysis
-CORSIA
-Team Lead
-Plant Economics
-Equipment Design
-💧
-FINAL YEAR COURSEWORK
-Wastewater Treatment — Morocco
-Oct – Nov 2025
-Delivered a conceptual membrane bioreactor design with control strategy and process cost model in 4 weeks. Built a MATLAB model (550+ lines) tracking transmembrane pressure and biomass, COD, and oxygen concentrations using mass balance ODEs and stoichiometric relationships, validated against target specifications.
-MATLAB
-MBR Design
-ODE Modelling
-Control Strategy
-Process Cost
-⚛️
-FINAL YEAR INDIVIDUAL ARTICLE
-Engineering the Atomic Future: The Case for Responsible Modular Reactors
-Oct 2025
-Authored an individual perspective paper critically comparing the sustainability of small modular reactors (SMRs) against conventional large-scale nuclear reactors. Evaluated lifecycle emissions, resource use, and environmental trade-offs, with a focused analysis of the environmental challenges inherent to SMRs and a synthesis of proposed engineering and policy solutions to address them.
-SMRs
-Nuclear Energy
-Sustainability
-Lifecycle Analysis
-Environmental Impact
-🔬
-UNIVERSITY LAB PROGRAMME
-Experimental Lab Reports
-Oct 2023 – Jun 2024
-Produced 12 technical reports across 36 hours of experimental lab work. Covered plug flow reactor modelling, Bernoulli's principle, and PID process control by processing raw data in Excel and MATLAB, critically evaluating findings against scientific literature.
-Excel
-MATLAB
-PID Control
-PFR Modelling
-Data Analysis
-ACTIVITIES & LEADERSHIP
-Extracurricular
+    .hero-inner { max-width: 1140px; margin: 0 auto; position: relative; }
 
-🌍
-Biodevices without Borders
-Commercial Sensors Team
-Oct 2025 – May 2026
-Contributed to the design and validation of an affordable commercial water quality sensor for rural communities. Developed and executed experimental protocols to test pH, conductivity, and dissolved oxygen sensors, ensuring reliable performance across various field deployment scenarios.
-🏛️
-Bath Malaysian Society
-Lead Treasurer
-Oct 2023 – Jun 2024
-Managed a £3,500+ annual budget and secured 5 new sponsorships to deliver events to 200+ members, demonstrating financial accountability, negotiation skills, and stakeholder management across university and external partners.
-🎓
-Peer Mentor
-Oct 2023 – Jun 2024
-Guided first-year Chemical Engineering students through the academic and personal challenges of university life, offering ongoing support with course content, study strategies, and settling into the department throughout the academic year.
-CAPABILITIES
-Skills & Tools
+    .hero-chip {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(43,108,176,0.22); border: 1px solid rgba(43,108,176,0.38);
+      color: #93C5FD; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem;
+    }
+    .hero-chip::before {
+      content: ''; width: 6px; height: 6px;
+      background: #60A5FA; border-radius: 50%;
+    }
 
-PROCESS ENGINEERING
-Reaction Engineering & Kinetics Mass & Energy Balances Fluid Mechanics Equipment Design (pre-FEED) Process Safety — HAZID, LOPA, P&ID PID Process Control ASME / NACE Standards Pinch Analysis
-COMPUTATIONAL TOOLS
-MATLAB — Advanced (ODE, PID, 1,000+ loc) Microsoft Excel — Advanced (Solver, optimisation) Aspen Plus — Process simulation AutoCAD — 3D mechanical & plant layouts
-COMMERCIAL & ANALYTICAL
-Technical Due Diligence CAPEX / OPEX Forecasting Financial Benchmarking Cost Benchmarking Models Site Feasibility Assessment RAG Risk Assessment Process Economics
-SOFT SKILLS
-Technical Report Writing Project Management & Planning Stakeholder Management Team Leadership (8-person team) Cross-disciplinary Collaboration Client-facing Communication
-CERTIFICATIONS & PROFESSIONAL DEVELOPMENT
-🎓  IChemE Student Member — working towards chartership 📊  Capital & Financial Markets — Khan Academy 🏦  Level 4 Certificate — Institute of Banking & Finance
-SELECTED WORK
-Reports & Documents
+    #hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.2rem, 9vw, 6rem);
+      font-weight: 700; color: var(--white);
+      line-height: 1.05; letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+    }
 
-Selected technical reports from my chemical engineering degree. Place your report PDFs in the files/reports/ folder to activate the download links.
-⚗️
-FINAL YEAR INDIVIDUAL PROJECT
-Sour Water Gas Shift Reactor — Plug Flow Reactor Design
-70-page report covering PFR design, MATLAB reaction kinetics modelling, HAZID/LOPA process safety, P&ID, and 3D AutoCAD mechanical design to ASME standards.
-View Report →
-✈️
-FINAL YEAR DESIGN PROJECT
-Sustainable Aviation Fuel — Pre-FEED Design Study
-135-page group pre-FEED report for a SAF facility including mass & energy balances, equipment sizing, plant economics, pinch analysis, and CORSIA lifecycle compliance.
-View Report →
-💧
-FINAL YEAR COURSEWORK
-Membrane Bioreactor Design — Wastewater Treatment, Morocco
-Conceptual MBR design with MATLAB ODE model tracking transmembrane pressure, biomass, COD and dissolved oxygen, validated against target product specifications.
-View Report →
-⚛️
-PERSPECTIVE PAPER
-Engineering the Atomic Future: The Case for Responsible Modular Reactors
-A perspective paper critically evaluating the sustainability credentials of small modular reactors against conventional large-scale nuclear reactors, covering lifecycle emissions, land use, capital costs, and deployment flexibility.
-View Paper →
-GET IN TOUCH
-Let's Connect
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: #93C5FD; font-weight: 400; margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+    }
 
-I am available for graduate roles and opportunities in process engineering, energy, and capital projects. Feel free to reach out via email or LinkedIn.
-✉ bl890@bath.ac.uk in linkedin.com/in/brennan-lee3 ☎ +44 79602 25336
+    .hero-tagline {
+      font-size: 1rem; color: rgba(255,255,255,0.65);
+      max-width: 540px; margin-bottom: 2.5rem; line-height: 1.7;
+    }
 
-Download Full CV
-Your Name
+    .hero-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
 
-Your Email
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      padding: 0.7rem 1.65rem; border-radius: var(--radius);
+      font-size: 0.88rem; font-weight: 600;
+      text-decoration: none; transition: all 0.2s;
+      cursor: pointer; border: none; font-family: 'Inter', sans-serif;
+    }
+    .btn-primary { background: var(--accent); color: var(--white); }
+    .btn-primary:hover {
+      background: var(--accent-hover); transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(43,108,176,0.42);
+    }
+    .btn-ghost {
+      background: transparent; color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.3);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.55); }
 
-Organisation
+    .hero-stats {
+      display: flex; gap: 3rem; margin-top: 4rem;
+      padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.09);
+      flex-wrap: wrap;
+    }
+    .hero-stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700; color: var(--white); line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.73rem; color: rgba(255,255,255,0.45);
+      margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.06em;
+    }
 
-Message
-Send Message
-© 2026 Brennan Lee  ·  BEng Chemical Engineering, University of Bath  ·  Built for professional use
-↑
+    /* ── SECTIONS ── */
+    section { padding: 6rem 2rem; }
+
+    .container { max-width: 1140px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700; color: var(--navy);
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .section-divider {
+      width: 44px; height: 3px;
+      background: var(--accent); border-radius: 2px; margin-bottom: 3rem;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--bg-alt); }
+
+    .about-grid {
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 5rem; align-items: start;
+    }
+
+    .photo-placeholder {
+      width: 210px; height: 210px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-light) 0%, #DBEAFE 100%);
+      border: 4px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem; font-weight: 700; color: var(--accent);
+      margin: 0 auto 1.25rem;
+    }
+
+    .photo-caption {
+      text-align: center; font-size: 0.72rem;
+      color: var(--muted-light); font-style: italic;
+    }
+
+    .about-bio {
+      font-size: 1rem; color: var(--text);
+      line-height: 1.85; margin-bottom: 1rem;
+    }
+
+    .about-facts {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;
+      margin-top: 1.75rem;
+    }
+    .fact-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 0.9rem 1.1rem;
+    }
+    .fact-label {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted-light); margin-bottom: 0.2rem;
+    }
+    .fact-value { font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+
+    /* ── TIMELINE ── */
+    #experience { background: var(--bg); }
+
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: ''; position: absolute; left: 7px; top: 10px; bottom: 0;
+      width: 2px; background: var(--border);
+    }
+
+    .timeline-item { position: relative; padding-left: 2rem; padding-bottom: 2.75rem; }
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-dot {
+      position: absolute; left: -2rem; top: 8px;
+      width: 16px; height: 16px;
+      background: var(--accent); border: 3px solid var(--bg);
+      border-radius: 50%; box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .timeline-card {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.65rem;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .timeline-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+    .timeline-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 1rem; margin-bottom: 0.2rem; flex-wrap: wrap;
+    }
+    .timeline-company { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+    .timeline-date {
+      font-size: 0.77rem; font-weight: 600; color: var(--accent);
+      background: var(--accent-light); padding: 0.18rem 0.6rem;
+      border-radius: 100px; white-space: nowrap;
+    }
+    .timeline-role { font-size: 0.88rem; font-style: italic; color: var(--muted); margin-bottom: 0.15rem; }
+    .timeline-location { font-size: 0.78rem; color: var(--muted-light); margin-bottom: 1rem; }
+
+    .timeline-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .timeline-bullets li {
+      font-size: 0.875rem; color: var(--text);
+      line-height: 1.65; padding-left: 1.2rem; position: relative;
+    }
+    .timeline-bullets li::before {
+      content: ''; position: absolute; left: 0; top: 0.57em;
+      width: 5px; height: 5px; background: var(--accent); border-radius: 50%;
+    }
+
+    /* ── PROJECTS ── */
+    #projects { background: var(--bg-alt); }
+
+    .project-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.35rem; margin-bottom: 3.5rem;
+    }
+
+    .project-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.65rem;
+      transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+    }
+    .project-card:hover {
+      box-shadow: var(--shadow-md); transform: translateY(-3px);
+      border-color: rgba(43,108,176,0.35);
+    }
+
+    .project-icon {
+      width: 46px; height: 46px; background: var(--accent-light);
+      border-radius: var(--radius); display: flex; align-items: center;
+      justify-content: center; font-size: 1.35rem; margin-bottom: 1rem;
+    }
+    .project-type {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem;
+    }
+    .project-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--navy); margin-bottom: 0.35rem; line-height: 1.3;
+    }
+    .project-date { font-size: 0.76rem; color: var(--muted-light); margin-bottom: 0.85rem; }
+    .project-desc { font-size: 0.86rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.1rem; }
+
+    .project-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+    .tag {
+      font-size: 0.68rem; font-weight: 500;
+      background: var(--tag-bg); color: var(--tag-text);
+      padding: 0.18rem 0.5rem; border-radius: 4px;
+    }
+
+    /* ── ACTIVITIES ── */
+    .activities-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.35rem;
+    }
+    .activity-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.65rem;
+      display: flex; gap: 1.1rem;
+    }
+    .activity-icon { font-size: 1.65rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .activity-org { font-weight: 700; color: var(--navy); font-size: 0.98rem; margin-bottom: 0.1rem; }
+    .activity-role { font-size: 0.83rem; font-style: italic; color: var(--muted); margin-bottom: 0.1rem; }
+    .activity-date { font-size: 0.76rem; color: var(--muted-light); margin-bottom: 0.65rem; }
+    .activity-desc { font-size: 0.86rem; color: var(--text); line-height: 1.65; }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--bg); }
+
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.35rem;
+    }
+    .skill-category {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.5rem;
+    }
+    .skill-category-title {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
+    }
+    .skill-tags { display: flex; flex-direction: column; gap: 0.5rem; }
+    .skill-item {
+      display: flex; align-items: center; gap: 0.55rem;
+      font-size: 0.875rem; color: var(--text);
+    }
+    .skill-item::before {
+      content: ''; width: 5px; height: 5px;
+      background: var(--accent); border-radius: 50%; flex-shrink: 0;
+    }
+
+    .cert-section { margin-top: 2.75rem; }
+    .cert-section-title {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 1rem;
+    }
+    .cert-grid { display: flex; gap: 0.85rem; flex-wrap: wrap; }
+    .cert-badge {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 0.55rem 1rem;
+      font-size: 0.83rem; font-weight: 500; color: var(--navy);
+    }
+
+    /* ── REPORTS ── */
+    #reports { background: var(--bg-alt); }
+
+    .reports-note {
+      font-size: 0.88rem; color: var(--muted);
+      margin-bottom: 2rem; max-width: 580px; line-height: 1.7;
+    }
+
+    .reports-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.35rem;
+    }
+    .report-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .report-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+    .report-thumb {
+      height: 110px;
+      display: flex; align-items: center; justify-content: center; font-size: 2.5rem;
+    }
+    .report-thumb-1 { background: linear-gradient(135deg, #1C2B4A 0%, #2B6CB0 100%); }
+    .report-thumb-2 { background: linear-gradient(135deg, #0F4C6E 0%, #1D9BC5 100%); }
+    .report-thumb-3 { background: linear-gradient(135deg, #064E3B 0%, #059669 100%); }
+    .report-thumb-4 { background: linear-gradient(135deg, #3B1F6E 0%, #7C3AED 100%); }
+
+    .report-body { padding: 1.25rem; }
+    .report-category {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem;
+    }
+    .report-title {
+      font-weight: 700; color: var(--navy);
+      font-size: 0.93rem; margin-bottom: 0.45rem; line-height: 1.35;
+    }
+    .report-desc {
+      font-size: 0.81rem; color: var(--muted);
+      line-height: 1.6; margin-bottom: 1rem;
+    }
+
+    .btn-sm {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.42rem 0.9rem; border-radius: var(--radius);
+      font-size: 0.78rem; font-weight: 600;
+      text-decoration: none; transition: all 0.2s;
+      background: var(--accent); color: var(--white);
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-sm:hover { background: var(--accent-hover); }
+
+    .report-placeholder {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.42rem 0.9rem; border-radius: var(--radius);
+      font-size: 0.78rem; font-weight: 500;
+      background: var(--bg-alt); color: var(--muted-light);
+      border: 1px solid var(--border);
+      font-style: italic;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--navy); color: var(--white); }
+    #contact .section-label { color: #93C5FD; }
+    #contact .section-title { color: var(--white); }
+    #contact .section-divider { background: rgba(255,255,255,0.2); }
+
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
+    }
+
+    .contact-tagline {
+      font-size: 0.95rem; color: rgba(255,255,255,0.6);
+      line-height: 1.75; margin-bottom: 2rem;
+    }
+
+    .contact-links { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+    .contact-link {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.92rem; color: rgba(255,255,255,0.8);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .contact-link:hover { color: #93C5FD; }
+    .contact-icon {
+      width: 36px; height: 36px; background: rgba(255,255,255,0.07);
+      border-radius: var(--radius); display: flex; align-items: center;
+      justify-content: center; font-size: 0.95rem; flex-shrink: 0;
+      font-weight: 700; color: rgba(255,255,255,0.7);
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 0.9rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+    .form-label {
+      font-size: 0.76rem; font-weight: 500;
+      color: rgba(255,255,255,0.5); letter-spacing: 0.03em;
+    }
+    .form-input, .form-textarea {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.13);
+      border-radius: var(--radius); padding: 0.65rem 0.9rem;
+      font-size: 0.88rem; color: var(--white);
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s, background 0.2s; width: 100%;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.28); }
+    .form-input:focus, .form-textarea:focus {
+      outline: none; border-color: rgba(147,197,253,0.55);
+      background: rgba(255,255,255,0.09);
+    }
+    .form-textarea { min-height: 115px; resize: vertical; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy-dark); padding: 1.4rem 2rem;
+      text-align: center; font-size: 0.77rem;
+      color: rgba(255,255,255,0.28);
+    }
+
+    /* ── SCROLL TO TOP ── */
+    .scroll-top {
+      position: fixed; bottom: 2rem; right: 2rem;
+      width: 42px; height: 42px; background: var(--accent);
+      color: var(--white); border: none; border-radius: 50%;
+      cursor: pointer; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-md);
+      opacity: 0; transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s; z-index: 50;
+    }
+    .scroll-top.visible { opacity: 1; transform: translateY(0); }
+    .scroll-top:hover { background: var(--accent-hover); }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0; transform: translateY(22px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 820px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .photo-placeholder { width: 160px; height: 160px; font-size: 2.5rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-stats { gap: 2rem; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 4rem 1.25rem; }
+      .about-facts { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+      .hero-stat-number { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Brennan<span> Lee</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#reports">Reports</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="files/cv.pdf" target="_blank" class="nav-cta">Download CV</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#education" onclick="toggleMenu()">Education</a>
+  <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#reports" onclick="toggleMenu()">Reports</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="files/cv.pdf" target="_blank" onclick="toggleMenu()">Download CV →</a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-chip">BEng Chemical Engineering · Bath &nbsp;·&nbsp; MSc Energy Systems &amp; Data Analytics · UCL</div>
+    <h1>Brennan Lee</h1>
+    <p class="hero-subtitle">Renewable Energy &nbsp;&nbsp;|&nbsp;&nbsp; Capital Projects</p>
+    <p class="hero-tagline">
+      Passionate Chemical Engineer with commercial insight in the Renewables industry.
+    </p>
+    <div class="hero-actions">
+      <a href="files/cv.pdf" target="_blank" class="btn btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+      <a href="#projects" class="btn btn-ghost">View Projects</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-number">77.5%</div>
+        <div class="hero-stat-label">1st Class Average</div>
+      </div>
+      <div>
+        <div class="hero-stat-number">£500M+</div>
+        <div class="hero-stat-label">Portfolio Value Covered</div>
+      </div>
+      <div>
+        <div class="hero-stat-number">15+</div>
+        <div class="hero-stat-label">Technical Due Diligence Reports</div>
+      </div>
+      <div>
+        <div class="hero-stat-number">3</div>
+        <div class="hero-stat-label">Industries Experienced</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <img src="files/Passport photo.jpg" alt="Brennan Lee" style="width:210px;height:210px;border-radius:50%;object-fit:cover;object-position:center 25%;border:4px solid var(--border);display:block;margin:0 auto 1.25rem;">
+      </div>
+      <div>
+        <div class="section-label fade-up">About Me</div>
+        <h2 class="section-title fade-up">Chemical Engineer.<br>Problem Solver.</h2>
+        <div class="section-divider fade-up"></div>
+        <p class="about-bio fade-up">
+          I am a BEng Chemical Engineering graduate from the University of Bath (1st Class Honours, 77.5%), progressing to an MSc in Energy Systems and Data Analytics at University College London in September 2026. My experience spans renewable energy and battery storage engineering at Everoze, financial advisory at PricewaterhouseCoopers in Kuala Lumpur, and process engineering at IOI Oleochemical in Penang.
+        </p>
+        <p class="about-bio fade-up">
+          I combine strong technical skills in process simulation, reaction modelling, and equipment design with the commercial acumen to translate engineering findings into client-ready recommendations. I am an IChemE student member working towards full chartership.
+        </p>
+        <div class="about-facts fade-up">
+          <div class="fact-card">
+            <div class="fact-label">MSc</div>
+            <div class="fact-value">Energy Systems &amp; Data Analytics — UCL</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-label">BEng</div>
+            <div class="fact-value">Chemical Engineering — University of Bath</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-label">BEng Classification</div>
+            <div class="fact-value">1st Class Honours (77.5%)</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-label">MSc Start</div>
+            <div class="fact-value">September 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education" style="background:var(--bg-alt)">
+  <div class="container">
+    <div class="section-label fade-up">Education</div>
+    <h2 class="section-title fade-up">Academic Background</h2>
+    <div class="section-divider fade-up"></div>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-company">University College London (UCL)</div>
+            <div class="timeline-date">Sep 2026 – Sep 2027</div>
+          </div>
+          <div class="timeline-role">MSc Energy Systems and Data Analytics</div>
+          <div class="timeline-location">London, UK</div>
+          <ul class="timeline-bullets">
+            <li>Will explore data analytics and modelling across energy systems, transport, and the built environment.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-company">University of Bath</div>
+            <div class="timeline-date">Oct 2022 – Jul 2026</div>
+          </div>
+          <div class="timeline-role">BEng Chemical Engineering (with placement)</div>
+          <div class="timeline-location">Bath, UK</div>
+          <ul class="timeline-bullets">
+            <li>Achieved 77.5% (1st Class Honours) in Years 1 and 2, covering key principles including Fluid Mechanics, Reaction Engineering, and Process Safety.</li>
+            <li>Working towards IChemE chartership.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label fade-up">Work Experience</div>
+    <h2 class="section-title fade-up">Professional Background</h2>
+    <div class="section-divider fade-up"></div>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-company">Everoze</div>
+            <div class="timeline-date">Sep 2024 – Jul 2025</div>
+          </div>
+          <div class="timeline-role">Process &amp; Systems Engineering Intern — Solar &amp; Storage</div>
+          <div class="timeline-location">Bristol, UK</div>
+          <ul class="timeline-bullets">
+            <li>Reduced lender risk exposure across £500M+ in BESS and solar portfolios (650 kWp to 360 MWp) by producing 15+ technical due diligence reports covering site feasibility assessments, grid integration reviews, and actionable risk mitigation recommendations.</li>
+            <li>Enabled solar site selection for two distilleries by performing RAG land assessments across 20+ land parcels, applying site feasibility criteria including grid proximity, environmental considerations, and shading analysis.</li>
+            <li>Improved CAPEX and OPEX forecasting for BESS projects by building a dynamic cost benchmarking model in Excel using Solver-based optimisation, providing scalable process economics across varying project sizes to support data-driven client recommendations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-company">PricewaterhouseCoopers (PwC)</div>
+            <div class="timeline-date">Aug – Sep 2023</div>
+          </div>
+          <div class="timeline-role">Advisory Intern — Capital Projects &amp; Infrastructure</div>
+          <div class="timeline-location">Kuala Lumpur, Malaysia</div>
+          <ul class="timeline-bullets">
+            <li>Strengthened a client's negotiation position on a £30M airline merger deal by conducting technical and financial benchmarking across 4 case studies, evaluating reorganisation decisions and asset utilisation.</li>
+            <li>Collated and normalised financial and operational metrics (asset turnover, profit per available seat kilometres, aircraft utilisation), demonstrating analytical and multi-disciplinary skills applicable to engineering modelling.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-company">IOI Oleochemical</div>
+            <div class="timeline-date">Jan – Mar 2021</div>
+          </div>
+          <div class="timeline-role">Process Engineering Trainee</div>
+          <div class="timeline-location">Penang, Malaysia</div>
+          <ul class="timeline-bullets">
+            <li>Applied process safety and quality assurance principles in a manufacturing plant by observing and documenting HACCP monitoring across production lines, gaining exposure to HSE compliance, utility optimisation strategies, and inter-department collaboration between quality control, assurance, and procurement.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label fade-up">Engineering Projects</div>
+    <h2 class="section-title fade-up">Academic &amp; Technical Work</h2>
+    <div class="section-divider fade-up"></div>
+
+    <div class="project-grid">
+
+      <div class="project-card fade-up">
+        <div class="project-icon">⚗️</div>
+        <div class="project-type">Final Year Individual Project</div>
+        <div class="project-title">Sour Water Gas Shift Reactor</div>
+        <div class="project-date">Apr – May 2026</div>
+        <p class="project-desc">Delivered a fully specified plug flow reactor design for the Fischer-Tropsch process in a 70-page report. Modelled reaction kinetics, temperature dependence, and pressure drop in MATLAB (1,000+ lines). Full process safety demonstration via HAZID, P&amp;ID with control loops, LOPA, and 3D AutoCAD mechanical design to ASME and NACE-compliance standards.</p>
+        <div class="project-tags">
+          <span class="tag">MATLAB</span>
+          <span class="tag">AutoCAD</span>
+          <span class="tag">HAZID</span>
+          <span class="tag">P&amp;ID</span>
+          <span class="tag">LOPA</span>
+          <span class="tag">ASME</span>
+          <span class="tag">Fischer-Tropsch</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-icon">✈️</div>
+        <div class="project-type">Final Year Design Project</div>
+        <div class="project-title">Sustainable Aviation Fuel Production</div>
+        <div class="project-date">Feb – Apr 2026</div>
+        <p class="project-desc">Led a team of 8 to advance a concept-to-design SAF production route in 7 weeks, producing a 135-page pre-FEED report covering mass &amp; energy balances, equipment sizing, plant economics, pinch analysis, and lifecycle emissions against CORSIA compliance. Introduced structured weekly planning with defined milestones.</p>
+        <div class="project-tags">
+          <span class="tag">Pre-FEED</span>
+          <span class="tag">Pinch Analysis</span>
+          <span class="tag">CORSIA</span>
+          <span class="tag">Team Lead</span>
+          <span class="tag">Plant Economics</span>
+          <span class="tag">Equipment Design</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-icon">💧</div>
+        <div class="project-type">Final Year Coursework</div>
+        <div class="project-title">Wastewater Treatment — Morocco</div>
+        <div class="project-date">Oct – Nov 2025</div>
+        <p class="project-desc">Delivered a conceptual membrane bioreactor design with control strategy and process cost model in 4 weeks. Built a MATLAB model (550+ lines) tracking transmembrane pressure and biomass, COD, and oxygen concentrations using mass balance ODEs and stoichiometric relationships, validated against target specifications.</p>
+        <div class="project-tags">
+          <span class="tag">MATLAB</span>
+          <span class="tag">MBR Design</span>
+          <span class="tag">ODE Modelling</span>
+          <span class="tag">Control Strategy</span>
+          <span class="tag">Process Cost</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-icon">⚛️</div>
+        <div class="project-type">Final Year Individual Article</div>
+        <div class="project-title">Engineering the Atomic Future: The Case for Responsible Modular Reactors</div>
+        <div class="project-date">Oct 2025</div>
+        <p class="project-desc">Authored an individual perspective paper critically comparing the sustainability of small modular reactors (SMRs) against conventional large-scale nuclear reactors. Evaluated lifecycle emissions, resource use, and environmental trade-offs, with a focused analysis of the environmental challenges inherent to SMRs and a synthesis of proposed engineering and policy solutions to address them.</p>
+        <div class="project-tags">
+          <span class="tag">SMRs</span>
+          <span class="tag">Nuclear Energy</span>
+          <span class="tag">Sustainability</span>
+          <span class="tag">Lifecycle Analysis</span>
+          <span class="tag">Environmental Impact</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-icon">🔬</div>
+        <div class="project-type">University Lab Programme</div>
+        <div class="project-title">Experimental Lab Reports</div>
+        <div class="project-date">Oct 2023 – Jun 2024</div>
+        <p class="project-desc">Produced 12 technical reports across 36 hours of experimental lab work. Covered plug flow reactor modelling, Bernoulli's principle, and PID process control by processing raw data in Excel and MATLAB, critically evaluating findings against scientific literature.</p>
+        <div class="project-tags">
+          <span class="tag">Excel</span>
+          <span class="tag">MATLAB</span>
+          <span class="tag">PID Control</span>
+          <span class="tag">PFR Modelling</span>
+          <span class="tag">Data Analysis</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Activities -->
+    <div class="section-label fade-up">Activities &amp; Leadership</div>
+    <h3 class="section-title fade-up" style="font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:0.75rem;">Extracurricular</h3>
+    <div class="section-divider fade-up"></div>
+
+    <div class="activities-grid">
+      <div class="activity-card fade-up">
+        <div class="activity-icon">🌍</div>
+        <div>
+          <div class="activity-org">Biodevices without Borders</div>
+          <div class="activity-role">Commercial Sensors Team</div>
+          <div class="activity-date">Oct 2025 – May 2026</div>
+          <p class="activity-desc">Contributed to the design and validation of an affordable commercial water quality sensor for rural communities. Developed and executed experimental protocols to test pH, conductivity, and dissolved oxygen sensors, ensuring reliable performance across various field deployment scenarios.</p>
+        </div>
+      </div>
+      <div class="activity-card fade-up">
+        <div class="activity-icon">🏛️</div>
+        <div>
+          <div class="activity-org">Bath Malaysian Society</div>
+          <div class="activity-role">Lead Treasurer</div>
+          <div class="activity-date">Oct 2023 – Jun 2024</div>
+          <p class="activity-desc">Managed a £3,500+ annual budget and secured 5 new sponsorships to deliver events to 200+ members, demonstrating financial accountability, negotiation skills, and stakeholder management across university and external partners.</p>
+        </div>
+      </div>
+      <div class="activity-card fade-up">
+        <div class="activity-icon">🎓</div>
+        <div>
+          <div class="activity-org">Peer Mentor</div>
+          <div class="activity-date">Oct 2023 – Jun 2024</div>
+          <p class="activity-desc">Guided first-year Chemical Engineering students through the academic and personal challenges of university life, offering ongoing support with course content, study strategies, and settling into the department throughout the academic year.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label fade-up">Capabilities</div>
+    <h2 class="section-title fade-up">Skills &amp; Tools</h2>
+    <div class="section-divider fade-up"></div>
+
+    <div class="skills-grid">
+
+      <div class="skill-category fade-up">
+        <div class="skill-category-title">Process Engineering</div>
+        <div class="skill-tags">
+          <div class="skill-item">Reaction Engineering &amp; Kinetics</div>
+          <div class="skill-item">Mass &amp; Energy Balances</div>
+          <div class="skill-item">Fluid Mechanics</div>
+          <div class="skill-item">Equipment Design (pre-FEED)</div>
+          <div class="skill-item">Process Safety — HAZID, LOPA, P&amp;ID</div>
+          <div class="skill-item">PID Process Control</div>
+          <div class="skill-item">ASME / NACE Standards</div>
+          <div class="skill-item">Pinch Analysis</div>
+        </div>
+      </div>
+
+      <div class="skill-category fade-up">
+        <div class="skill-category-title">Computational Tools</div>
+        <div class="skill-tags">
+          <div class="skill-item">MATLAB — Advanced (ODE, PID, 1,000+ loc)</div>
+          <div class="skill-item">Microsoft Excel — Advanced (Solver, optimisation)</div>
+          <div class="skill-item">Aspen Plus — Process simulation</div>
+          <div class="skill-item">AutoCAD — 3D mechanical &amp; plant layouts</div>
+        </div>
+      </div>
+
+      <div class="skill-category fade-up">
+        <div class="skill-category-title">Commercial &amp; Analytical</div>
+        <div class="skill-tags">
+          <div class="skill-item">Technical Due Diligence</div>
+          <div class="skill-item">CAPEX / OPEX Forecasting</div>
+          <div class="skill-item">Financial Benchmarking</div>
+          <div class="skill-item">Cost Benchmarking Models</div>
+          <div class="skill-item">Site Feasibility Assessment</div>
+          <div class="skill-item">RAG Risk Assessment</div>
+          <div class="skill-item">Process Economics</div>
+        </div>
+      </div>
+
+      <div class="skill-category fade-up">
+        <div class="skill-category-title">Soft Skills</div>
+        <div class="skill-tags">
+          <div class="skill-item">Technical Report Writing</div>
+          <div class="skill-item">Project Management &amp; Planning</div>
+          <div class="skill-item">Stakeholder Management</div>
+          <div class="skill-item">Team Leadership (8-person team)</div>
+          <div class="skill-item">Cross-disciplinary Collaboration</div>
+          <div class="skill-item">Client-facing Communication</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cert-section fade-up">
+      <div class="cert-section-title">Certifications &amp; Professional Development</div>
+      <div class="cert-grid">
+        <div class="cert-badge">🎓&nbsp; IChemE Student Member — working towards chartership</div>
+        <div class="cert-badge">📊&nbsp; Capital &amp; Financial Markets — Khan Academy</div>
+        <div class="cert-badge">🏦&nbsp; Level 4 Certificate — Institute of Banking &amp; Finance</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REPORTS ── -->
+<section id="reports">
+  <div class="container">
+    <div class="section-label fade-up">Selected Work</div>
+    <h2 class="section-title fade-up">Reports &amp; Documents</h2>
+    <div class="section-divider fade-up"></div>
+    <p class="reports-note fade-up">
+      Selected technical reports from my chemical engineering degree. Place your report PDFs in the <code style="font-size:0.85em;background:var(--bg);padding:0.1em 0.35em;border-radius:4px;border:1px solid var(--border);">files/reports/</code> folder to activate the download links.
+    </p>
+
+    <div class="reports-grid">
+
+      <div class="report-card fade-up">
+        <div class="report-thumb report-thumb-1">⚗️</div>
+        <div class="report-body">
+          <div class="report-category">Final Year Individual Project</div>
+          <div class="report-title">Sour Water Gas Shift Reactor — Plug Flow Reactor Design</div>
+          <p class="report-desc">70-page report covering PFR design, MATLAB reaction kinetics modelling, HAZID/LOPA process safety, P&amp;ID, and 3D AutoCAD mechanical design to ASME standards.</p>
+          <a href="files/reports/sour-water-gas-shift.pdf" target="_blank" class="btn-sm">View Report →</a>
+        </div>
+      </div>
+
+      <div class="report-card fade-up">
+        <div class="report-thumb report-thumb-2">✈️</div>
+        <div class="report-body">
+          <div class="report-category">Final Year Design Project</div>
+          <div class="report-title">Sustainable Aviation Fuel — Pre-FEED Design Study</div>
+          <p class="report-desc">135-page group pre-FEED report for a SAF facility including mass &amp; energy balances, equipment sizing, plant economics, pinch analysis, and CORSIA lifecycle compliance.</p>
+          <a href="files/reports/saf-design-project.pdf" target="_blank" class="btn-sm">View Report →</a>
+        </div>
+      </div>
+
+      <div class="report-card fade-up">
+        <div class="report-thumb report-thumb-3">💧</div>
+        <div class="report-body">
+          <div class="report-category">Final Year Coursework</div>
+          <div class="report-title">Membrane Bioreactor Design — Wastewater Treatment, Morocco</div>
+          <p class="report-desc">Conceptual MBR design with MATLAB ODE model tracking transmembrane pressure, biomass, COD and dissolved oxygen, validated against target product specifications.</p>
+          <a href="files/reports/wastewater-morocco.pdf" target="_blank" class="btn-sm">View Report →</a>
+        </div>
+      </div>
+
+      <div class="report-card fade-up">
+        <div class="report-thumb report-thumb-4">⚛️</div>
+        <div class="report-body">
+          <div class="report-category">Perspective Paper</div>
+          <div class="report-title">Engineering the Atomic Future: The Case for Responsible Modular Reactors</div>
+          <p class="report-desc">A perspective paper critically evaluating the sustainability credentials of small modular reactors against conventional large-scale nuclear reactors, covering lifecycle emissions, land use, capital costs, and deployment flexibility.</p>
+          <a href="files/reports/perspective-paper.pdf" target="_blank" class="btn-sm">View Paper →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="section-label fade-up">Get In Touch</div>
+        <h2 class="section-title fade-up">Let's Connect</h2>
+        <div class="section-divider fade-up"></div>
+        <p class="contact-tagline fade-up">
+          I am available for graduate roles and opportunities in process engineering, energy, and capital projects. Feel free to reach out via email or LinkedIn.
+        </p>
+        <div class="contact-links fade-up">
+          <a href="mailto:bl890@bath.ac.uk" class="contact-link">
+            <div class="contact-icon">✉</div>
+            bl890@bath.ac.uk
+          </a>
+          <a href="https://www.linkedin.com/in/brennan-lee3" target="_blank" rel="noopener" class="contact-link">
+            <div class="contact-icon">in</div>
+            linkedin.com/in/brennan-lee3
+          </a>
+          <a href="tel:+447960225336" class="contact-link">
+            <div class="contact-icon">☎</div>
+            +44 79602 25336
+          </a>
+        </div>
+        <a href="files/cv.pdf" target="_blank" class="btn btn-primary fade-up">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Full CV
+        </a>
+      </div>
+      <div>
+        <form class="contact-form fade-up" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Email</label>
+            <input type="email" class="form-input" placeholder="jane@company.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Organisation</label>
+            <input type="text" class="form-input" placeholder="Company name (optional)">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Hello Brennan, I'd like to discuss..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2026 Brennan Lee &nbsp;·&nbsp; BEng Chemical Engineering, University of Bath &nbsp;·&nbsp; Built for professional use</p>
+</footer>
+
+<!-- ── SCROLL TO TOP ── -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+
+<script>
+  const navbar    = document.getElementById('navbar');
+  const scrollBtn = document.getElementById('scrollTop');
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+
+    navbar.classList.toggle('scrolled', y > 20);
+    scrollBtn.classList.toggle('visible', y > 400);
+
+    // Active nav link
+    const sections  = document.querySelectorAll('section[id]');
+    const navLinks  = document.querySelectorAll('.nav-links a');
+    let current = '';
+    sections.forEach(s => {
+      if (y >= s.offsetTop - 80) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 70);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.textContent = 'Message sent!';
+    btn.style.background = '#059669';
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.style.background = '';
+      e.target.reset();
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>
